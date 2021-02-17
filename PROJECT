@@ -1,0 +1,7 @@
+domain: infobloxdns.io
+repo: infoblox-operator
+resources:
+- group: infobox
+  kind: Dnsrecord
+  version: v1alpha1
+version: "2"

@@ -1,0 +1,7 @@
+apiVersion: infobox.infobloxdns.io/v1alpha1
+kind: Dnsrecord
+metadata:
+  name: dnsrecord-sample
+spec:
+  # Add fields here
+  foo: bar

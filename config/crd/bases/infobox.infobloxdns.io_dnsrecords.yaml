@@ -34,9 +34,11 @@ spec:
         spec:
           description: DnsrecordSpec defines the desired state of Dnsrecord
           properties:
-            foo:
+            hostname:
               description: Foo is an example field of Dnsrecord. Edit Dnsrecord_types.go
-                to remove/update
+                to remove/update Foo string `json:"foo,omitempty"`
+              type: string
+            ipaddress:
               type: string
           type: object
         status:

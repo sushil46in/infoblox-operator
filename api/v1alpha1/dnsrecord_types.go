@@ -29,7 +29,9 @@ type DnsrecordSpec struct {
 	// Important: Run "make" to regenerate code after modifying this file
 
 	// Foo is an example field of Dnsrecord. Edit Dnsrecord_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	//Foo string `json:"foo,omitempty"`
+	Hostname  string `json:"hostname,omitempty"`
+	Ipaddress string `json:"ipaddress,omitempty"`
 }
 
 // DnsrecordStatus defines the observed state of Dnsrecord

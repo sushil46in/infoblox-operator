@@ -1,0 +1,8 @@
+apiVersion: infobox.infobloxdns.io/v1alpha1
+kind: Dnsrecord
+metadata:
+  name: dnsrecord1
+spec:
+  # Add fields here
+  hostname: mishkasaini.com
+  ipaddress: 10.10.10.4

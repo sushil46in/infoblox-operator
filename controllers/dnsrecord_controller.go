@@ -62,15 +62,16 @@ func (r *DnsrecordReconciler) Reconcile(req ctrl.Request) (ctrl.Result, error) {
 			if err := r.Update(context.Background(), vg); err != nil {
 				return ctrl.Result{}, err
 			}
-			sendmsg(vg.Spec.Hostname, vg.Spec.Ipaddress)
+			log.Info("New DNS Record has been discovered in Kubernetes")
+			//sendmsg(vg.Spec.Hostname, vg.Spec.Ipaddress+"has been created")
 		} else {
-			log.Info("DNS record has been updated")
+			sendmsg(vg.Spec.Hostname, vg.Spec.Ipaddress+" has been created or updated")
 		}
 	} else {
 		// The object is being deleted
 		if containsString(vg.ObjectMeta.Finalizers, myFinalizerName) {
 			// our finalizer is present, so lets handle any external dependency
-			sendmsg("dd", "sdf")
+			sendmsg(vg.Spec.Hostname, vg.Spec.Ipaddress+" has been deleted")
 
 			// remove our finalizer from the list and update it.
 			vg.ObjectMeta.Finalizers = removeString(vg.ObjectMeta.Finalizers, myFinalizerName)

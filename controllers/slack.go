@@ -7,7 +7,7 @@ import (
 )
 
 func sendmsg(hn string, ip string) {
-	api := slack.New("xoxp-1745509759573-1748801275043-1764482774790-5a923f0b4db54ea46e48ed12c7b2a079")
+	api := slack.New("xoxp-1745509759573-1748801275043-1805173689012-1e46dc91799d3b2fa8cb4076f7e73b35")
 	attachment := slack.Attachment{
 		Pretext: "New DNS Record",
 		Text:    hn + " " + ip,
